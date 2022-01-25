@@ -26,6 +26,8 @@ while x <= 2:
     plt.title(str(p)+"%")
     plt.draw()
     plt.pause(0.05)
+    if x == -2:
+        plt.pause(2)
     plt.clf()
     x += 0.05
 
@@ -35,7 +37,7 @@ while x >= -2:
     y = g(x)
     ypoints.append(y)
     plt.plot(xpoints,ypoints)
-    p = round(50 + 100*(2-x)/4,0)/2
+    p = 50+round(100*(2-x)/4,0)/2
     plt.title(str(p)+"%")
     plt.draw()
     plt.pause(0.05)
